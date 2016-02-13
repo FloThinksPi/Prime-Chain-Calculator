@@ -1,0 +1,32 @@
+Ram min 16GB -> Genutzt von Algorythmus = 12G -> -Xmx13G Sonst Out of Memory , oder MaxPrime in Config verhkleinern (halbieren etc.)
+
+    Reading Prime Numbers Database
+    No Prime Database Found!
+
+    Generating Primes
+    Calculated 105097564 Primes in 146.873153501 Seconds
+
+    Writing to File
+    Wrote 105097564 Primes to File in 92.938451884 Seconds
+
+    Search for Dulicate Primes
+    You have 8 Cores -> Using 8 Threads
+
+    Searched 2147483645 Numbers for PrimeChains in 108.025505896 Seconds
+    Longest Primechain = [31, 331, 3331, 33331, 333331, 3333331, 33333331]
+
+    Process finished with exit code 0
+
+2. Lauf mit existierender Datenbank
+
+    Reading Prime Numbers Database
+    Loaded 105097564 Primes from Database in 103.190204411 Seconds
+
+    Search for Dulicate Primes
+    You have 8 Cores -> Using 8 Threads
+
+    Searched 2147483645 Numbers for PrimeChains in 99.849302565 Seconds
+    Longest Primechain = [31, 331, 3331, 33331, 333331, 3333331, 33333331]
+
+    Process finished with exit code 0
+

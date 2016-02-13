@@ -1,15 +1,24 @@
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by flo on 11.02.16.
  */
-public class PrimeGenerator {
+public class PrimeChainFinder {
 
-    public static List<Long> byDuplication(byte[] number) {
+    public static ExecutorService newFixedThreadPool(int nThreads) {
+        return new ThreadPoolExecutor(nThreads, nThreads,
+                0L, TimeUnit.MILLISECONDS,
+                new LinkedBlockingQueue<Runnable>());
+    }
 
-        List<Long> resultList=new ArrayList<Long>();
+    public static ArrayList<Long> byDuplication(byte[] number,long numberLong) {
+
+        ArrayList<Long> resultList=new ArrayList<>();
+
         //Generate All Duplicates
         for (int position = 0; position < number.length;position++){
 
@@ -32,28 +41,24 @@ public class PrimeGenerator {
                 }
 
             }
-
-            //Convert ByteArray to Long TODO Make Faster , Make Bigger
             long l = Utils.bytesToLong(newNumber);
-            //System.out.println(l);
 
+            boolean isPrime=Utils.primeCheck(l);
 
-            boolean isPrime=Config.instance.primeChecker.check(l);
-
-            //System.out.println(isPrime);
-
-            List<Long> tempResultList=new ArrayList<Long>();
+            ArrayList<Long> tempResultList=new ArrayList<Long>();
             if(isPrime){
-                tempResultList=PrimeGenerator.byDuplication(newNumber);
-                tempResultList.add(l);
+                tempResultList= PrimeChainFinder.byDuplication(newNumber,l);
             }
 
-            //Bestes Ergebniss Finden und zur rückgabe speichern
+            //Bestes Ergebniss aus allen Kombinationen Finden und zur rückgabe speichern
             if(tempResultList.size()>resultList.size()){
                 resultList=tempResultList;
             }
 
         }
+
+        //sich selbst hinzufügen da selbst Primzahl
+        resultList.add(numberLong);
 
         return resultList;
 
