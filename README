@@ -1,0 +1,13 @@
+Beim ersten Ausführen werden Primzahlen im Raum von 0 bis Config.instance.maxPrimeNumber ermittelt und als Datei gespeichert(Default bis INTMAX -> Circa 600MB)
+Beim nächsten ausfüren wird diese Datei geladen was dazu führt das die primzahlen circa doppelt so schnell geladen werden.
+
+Bei maxPrimeNumber=INTMAX benötigt man 16GB ram und min den parameter -Xmx12G!!
+Falls das zu viel ist einfach maxPrimeNumber=INTMAX/2 -> Speicher wird circa halbiert.
+!!WICHTIG!! die Primes.db löschen damit neue Primzahlen (kleinere) erstellt und gespeichert werden, sonst wird immer die datei geladen!
+
+Wenn die Primzahlen bereitgestellt sind  wird in dem bereich von 0 bis maxPrimeNumber die längste Kette an Primzahlen gesucht.
+Dabei können die ketten nicht über maxPrimeNumber hinausgehen denn es stehen nur Primzahlen im int bereich zu verfügung.
+
+d.h. [31, 331, 3331, 33331, 333331, 3333331, 33333331] ist die längste kette , potentielle weitere glieder sind nicht mehr im Integer raum und daher wurden sie nicht berechnet.
+
+In der RESULTS Datei sind 2 Testläufe schon ausgegeben da es sonst etwas dauert (Auf meinem laptop war es nach 20 min noch nicht fertig)

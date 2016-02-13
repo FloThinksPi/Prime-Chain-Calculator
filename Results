@@ -20,13 +20,12 @@ Ram min 16GB -> Genutzt von Algorythmus = 12G -> -Xmx13G Sonst Out of Memory , o
 2. Lauf mit existierender Datenbank
 
     Reading Prime Numbers Database
-    Loaded 105097564 Primes from Database in 103.190204411 Seconds
+    Loaded 105097564 Primes from Database in 87.51045922 Seconds
 
     Search for Dulicate Primes
-    You have 8 Cores -> Using 8 Threads
+    You have 8 Cores -> Using 16 Threads
 
-    Searched 2147483645 Numbers for PrimeChains in 99.849302565 Seconds
+    Searched 2147483645 Numbers for PrimeChains in 90.92009578 Seconds
     Longest Primechain = [31, 331, 3331, 33331, 333331, 3333331, 33333331]
 
     Process finished with exit code 0
-
