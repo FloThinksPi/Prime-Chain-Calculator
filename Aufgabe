@@ -1,0 +1,21 @@
+45 // Primes by duplicating some digit
+Beispiel: 18593 → 185593 → 1855993 → 11855993 → 118555993 → 1185559993 →
+11855599933 → 118555999333 → 1185559999333 → 11855599993333 → 118555999933333
+Hinweis:
+Parallelisiert ist eine möglichst lange Sequenz von primes zu ermitteln.
+
+Wichtige allgemeine Hinweise:
+a) Zielsetzungen:
+- Training der Kompetenz bezüglich der Implementierung von anspruchsvollen Algorithmen.
+- Wiederholung und Vertiefung des Wissens zu Parallelisierung mit CyclicBarrier.
+- Praktische Anwendung des Wissens auf rechenintensive/komplexe Aufgabenstellungen.
+b) Bitte implementieren Sie eine lauffähige Applikation in Java 8.
+c) Bitte trimmen Sie die Implementierung auf Performance (optimale Datenstrukturen usw.).
+d) Bitte speichern Sie Ihre Implementierung in einem Paket concurrency<TaskID>.
+e) Bitte erstellen Sie von der Implementierung eine Zip-Datei.
+f)
+
+Bitte speichern Sie die Zip-Datei mit der Implementierung in der Dropbox
+dhbw_se_II_workspace_2016 in Ihrem korrespondierenden Unterverzeichnis.
+g) Zeitansatz: 4 Stunden (Anrechnung 12 Stunden)
+h) Abgabetermin: 22.02.2016
