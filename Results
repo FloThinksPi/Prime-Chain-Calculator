@@ -1,4 +1,4 @@
-Ram min 16GB -> Genutzt von Algorythmus = 12G -> -Xmx13G Sonst Out of Memory , oder MaxPrime in Config verhkleinern (halbieren etc.)
+1. Run
 
     Reading Prime Numbers Database
     No Prime Database Found!
@@ -17,7 +17,7 @@ Ram min 16GB -> Genutzt von Algorythmus = 12G -> -Xmx13G Sonst Out of Memory , o
 
     Process finished with exit code 0
 
-2. Lauf mit existierender Datenbank
+2. Run
 
     Reading Prime Numbers Database
     Loaded 105097564 Primes from Database in 87.51045922 Seconds
